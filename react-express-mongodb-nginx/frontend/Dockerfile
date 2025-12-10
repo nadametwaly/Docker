@@ -13,7 +13,7 @@ COPY package-lock.json /usr/src/app
 #    && npm config set depth 0 \
 #    && npm i install
 
-RUN npm install
+RUN npm install --network-timeout=1000000000
 # Get all the code needed to run the app
 COPY . /usr/src/app
 
